@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Arkenstone with A</title>
+  <path d="M32 4 49 12 59 29 53 47 32 60 11 47 5 29 15 12Z" fill="#173E42" stroke="#173E42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m32 4 17 8-9 9-16-1Z" fill="#F5FAEE"/>
+  <path d="m15 12 17-8-8 16-10 10-9-1Z" fill="#C4E7E4"/>
+  <path d="m49 12 10 17-11 2-8-10Z" fill="#D9DAF2"/>
+  <path d="m5 29 9 1 10 14-13 3Z" fill="#86BABC"/>
+  <path d="m59 29-6 18-12-4 7-12Z" fill="#B2D4E6"/>
+  <path d="m11 47 13-3 8 16Z" fill="#C8D8EF"/>
+  <path d="m53 47-21 13 9-17Z" fill="#DBCFDA"/>
+  <path d="m24 44 17-1-9 17Z" fill="#F0E8CB"/>
+  <path d="m24 20 16 1 8 10-7 12-17 1-10-14Z" fill="#FCFFF8"/>
+  <path d="m24 20 16 1-8 10-18-1Z" fill="#E9F7F1"/>
+  <path d="m32 31 16 0-7 12Z" fill="#E4F0F8"/>
+  <path d="M32 4 49 12 59 29 53 47 32 60 11 47 5 29 15 12Z" fill="none" stroke="#173E42" stroke-width="2" stroke-linejoin="round"/>
+  <path aria-label="A" d="M20 44 29 20h6l9 24h-7l-1.5-5h-7L27 44Zm10-10h4l-2-7Z" fill="#173E42" fill-rule="evenodd"/>
+</svg>

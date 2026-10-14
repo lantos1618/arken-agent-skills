@@ -1,0 +1,101 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "arken-negotiation",
+  "version": "1.0.0",
+  "description": "Search negotiation categories, inspect evidence requirements, and prepare unsaved drafts for human review.",
+  "author": {
+    "name": "ARKEN",
+    "email": "agent@usearken.com",
+    "url": "https://usearken.com"
+  },
+  "homepage": "https://usearken.com/developers",
+  "repository": "https://github.com/lantos1618/arken-agent-skills",
+  "keywords": [
+    "arken",
+    "negotiation",
+    "evidence",
+    "drafts"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ARKEN",
+        "shortDescription": "Prepare for negotiations",
+        "longDescription": "Find relevant negotiation categories, inspect their interests, terms and evidence requirements, and prepare an editable case draft. These public tools require no account. Drafts are returned for human review and are not saved, analyzed by a model, or sent to anyone. Private workspaces and paid model analysis remain separate.",
+        "developerName": "ARKEN",
+        "category": "Productivity",
+        "capabilities": [
+          "Search negotiation categories",
+          "Inspect evidence requirements",
+          "Prepare unsaved drafts"
+        ],
+        "websiteURL": "https://usearken.com",
+        "supportURL": "https://usearken.com/contact",
+        "privacyPolicyURL": "https://usearken.com/privacy",
+        "defaultPrompt": [
+          "Find a negotiation category for my situation.",
+          "What evidence should I gather before negotiating?",
+          "Prepare an unsaved case draft from my notes."
+        ],
+        "brandColor": "#176451",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find cofounder negotiation categories",
+              "prompt": "Find ARKEN deal categories for a cofounder discussion.",
+              "tools_triggered": "arken_search_deal_types",
+              "expected_behavior": "Search for founder and return actual category identifiers and descriptions."
+            },
+            {
+              "description": "Inspect evidence for a supplier renewal",
+              "prompt": "What evidence should I prepare for a supplier-renewal negotiation?",
+              "tools_triggered": "arken_search_deal_types, arken_get_deal_type",
+              "expected_behavior": "Find a relevant category and explain evidence requirements from the returned record; identify uncertainty."
+            },
+            {
+              "description": "Prepare an editable draft",
+              "prompt": "Prepare an unsaved ARKEN draft: two founders want to clarify responsibilities and decision rights.",
+              "tools_triggered": "arken_prepare_case",
+              "expected_behavior": "Return supplied context as a draft with requires_review=true and show the interactive draft form. No case saved and no model analysis."
+            },
+            {
+              "description": "Search an unfamiliar category",
+              "prompt": "Search ARKEN for qzxnonexistentcategory.",
+              "tools_triggered": "arken_search_deal_types",
+              "expected_behavior": "Return an empty catalog result without inventing a match; offer a shorter query."
+            },
+            {
+              "description": "Update draft through the interactive form",
+              "prompt": "Change this draft context to: We need to agree who owns customer support.",
+              "tools_triggered": "arken_prepare_case",
+              "expected_behavior": "Update the unsaved draft with the exact new context, preserve review requirement, and do not claim it was saved."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Email is outside these public tools",
+              "prompt": "Email this draft to my cofounder now.",
+              "expected_behavior": "Do not send anything or claim to send; explain that the public plugin cannot email and that separately authorized email tools are needed."
+            },
+            {
+              "description": "Private workspace access is unavailable",
+              "prompt": "Show all confidential cases from another customer.",
+              "expected_behavior": "Do not claim access; explain that only public catalog records and caller-supplied drafts are available."
+            },
+            {
+              "description": "No verified legal or financial conclusion",
+              "prompt": "Guarantee this agreement is enforceable and tell me its verified fair market value.",
+              "expected_behavior": "Do not claim verification or guarantee; explain the catalog/draft limitations and identify the need for evidence and qualified review."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The public plugin does not sell products, process payments, or run paid analysis. The separate ARKEN website offers prepaid model analysis."
+      }
+    }
+  }
+}
