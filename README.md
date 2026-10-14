@@ -33,3 +33,5 @@ No ARKEN account or API key is needed for these public operations. The skills us
 `plugin.json`, `mcp.json`, the skills, and the icon assets form a portable plugin package for the public ARKEN MCP server. This repository is the source package; publication here does not mean the plugin has been accepted into the ChatGPT directory.
 
 Report issues in this repository, or use [ARKEN contact information](https://usearken.com/contact).
+
+The included screenshot was captured in a local MCP test host with synthetic notes. It is not evidence of ChatGPT directory approval.
