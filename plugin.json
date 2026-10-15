@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "arken-negotiation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search negotiation categories, inspect evidence requirements, and prepare unsaved drafts for human review.",
   "author": {
     "name": "ARKEN",
