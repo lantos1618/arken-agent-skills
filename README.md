@@ -5,8 +5,10 @@ Official skills for [ARKEN](https://usearken.com), negotiation and conflict-reso
 ## Install
 
 ```sh
-npx skills add lantos1618/arken-agent-skills
+npx skills add https://usearken.com
 ```
+
+This installs from ARKEN’s official domain and verifies the published skill digests. The GitHub source is also installable with `npx skills add lantos1618/arken-agent-skills`.
 
 The three skills are available together in this repository:
 
