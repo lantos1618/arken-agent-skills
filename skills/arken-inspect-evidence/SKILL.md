@@ -3,6 +3,8 @@ name: arken-inspect-evidence
 description: Use an ARKEN deal category to identify negotiable terms and evidence gaps before a negotiation. Apply when the user wants a preparation checklist grounded in the public ARKEN catalog.
 metadata:
   author: ARKEN
+  homepage: https://usearken.com
+  repository: https://github.com/lantos1618/arken-agent-skills
   version: "1.0.0"
 ---
 

@@ -3,6 +3,8 @@ name: arken-prepare-case-draft
 description: Prepare an unsaved ARKEN negotiation case draft from user-provided context for human review. Use when the user wants an editable starting frame, not a saved case, model analysis, or an outgoing message.
 metadata:
   author: ARKEN
+  homepage: https://usearken.com
+  repository: https://github.com/lantos1618/arken-agent-skills
   version: "1.0.0"
 ---
 

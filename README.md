@@ -20,6 +20,7 @@ No ARKEN account or API key is needed for these public operations. The skills us
 
 ## Other interfaces
 
+- [Official skill documentation and ownership](https://usearken.com/docs/skills)
 - [Developer guide](https://usearken.com/developers)
 - [API reference](https://usearken.com/docs/api)
 - [OpenAPI contract](https://usearken.com/openapi.json)

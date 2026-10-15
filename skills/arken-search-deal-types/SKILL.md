@@ -3,6 +3,8 @@ name: arken-search-deal-types
 description: Find the relevant ARKEN negotiation category when a user wants to prepare for a negotiation, compare deal types, or identify which interests and terms to examine.
 metadata:
   author: ARKEN
+  homepage: https://usearken.com
+  repository: https://github.com/lantos1618/arken-agent-skills
   version: "1.0.0"
 ---
 
